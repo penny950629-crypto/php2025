@@ -1,38 +1,229 @@
-<!DOCTYPE html>
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <title>My Resume</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>資訊管理 學類</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="資管.css"/>
 </head>
-
 <body>
-    <h1 id="primaryHeading" class="importantHeadings">自我介紹</h1>
-    <p>嗨，大家好！我是<strong>蔡沛㚬</strong>，一個<i>熱愛資訊系統與管理相關</i>的人。</p>
-    
-    <h2>背景</h2>
-    <p>在<u>資訊管理系</u>方面，我具有相關的知識和經驗。</p>
-    
-    <h2>專業技能</h2>
-    <p>我主要的專業技能有:
-        <li>具備資訊相關背景</li>
-        <li>具備管理相關經驗</li>    
-    <p>
-    
-    <h2>興趣愛好</h2>
-    <p>除了工作，我對於<u>靜態休閒活動</u>非常感興趣。在我的空閒時間，我喜歡<i>手做、旅行、唱歌</i>。</p>
-    
-    <h2>為什麼選擇這個領域</h2>
-    <p>我選擇<strong>專案管理</strong>的原因是因為<mark>希望能結合自己的專業</mark>。</p>
-    
-    <h2>課程</h2>
-    <p>我最喜歡的輔大課程是<strong>會計課</strong></p>
-    <a href="C:\Users\USER\Desktop\web\會計學介紹.html">會計學介紹</a>
 
-    <h2>聯絡方式</h2>
-    <p>如果你對我有任何問題或合作機會，請隨時與我聯繫：</p>
-        <li>Email：penny950629@gmail.com</li><br/>
-        <li>電話：0986128176</li><br/>
+    <fieldset>
+        <nav id="mainNav" class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="資訊學群.html">
+                <img src="collego-logo.png" alt="Collego" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-underline me-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        大學選才
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">認識學群</a></li>
+                        <li><a class="dropdown-item" href="#">認識學類</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="高中育才">高中育才</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="焦點話題">焦點話題</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="最新消息">最新消息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="搜尋">搜尋</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="常見與問答">常見與問答</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">登入</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
 
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">姓名</label>
+                            <input type="text" class="form-control" id="name" placeholder="姓名">
+                        </div>
+                        <div class="mb-3">
+                            <label for="birth" class="form-label">出生(年/月/日)</label>
+                            <input type="text" class="form-control" id="birth" placeholder="出生(年/月/日)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">電子郵件</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="輸入你的 Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="password" placeholder="輸入密碼">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">登入</button>
+                    </form>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+    <div class="container">
+        <h1><strong>資訊管理 學類</strong></h1>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+        </nav>
+        <div class="button-container">
+            <a href="資訊管理學類介紹.html" class="button">
+                <span>📚</span>
+                <p>學類介紹</p>
+            </a>
+            <a href="資管生涯進路.html" class="button">
+                <span>🚀</span>
+                <p>生涯進路</p>
+            </a>
+            <a href="資管高中準備.html" class="button">
+                <span>🎓</span>
+                <p>高中準備</p>
+            </a>
+            <a href="資管能力特質.html" class="button">
+                <span>💪</span>
+                <p>能力特質</p>
+            </a>
+            <a href="資管對應校系.html" class="button">
+                <span>🏫</span>
+                <p>對應校系</p>
+            </a>
+            <a href="資管學類體驗.html" class="button special">
+                <span>🎮</span>
+                <p>學類體驗</p>
+            </a>
+        </div>
+        <div class="card">
+        <div class="school-list-row">
+            <span class="school-name">國立臺灣大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立中央大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立成功大學</span>
+            <span class="dept-name">工業與資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">東吳大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立政治大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">中原大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">東海大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立陽明交通大學</span>
+            <span class="dept-name">資訊管理與財務金融學系資訊管理組</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">淡江大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">逢甲大學</span>
+            <span class="dept-name">人工智慧技術與應用學士學位學程</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立中央大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">中國文化大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">靜宜大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">大同大學</span>
+            <span class="dept-name">事業與資訊經營學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">靜宜大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">輔仁大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立彰化師範大學</span>
+            <span class="dept-name">資訊管理學系資訊管理組</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立彰化師範大學</span>
+            <span class="dept-name">資訊管理學系數位內容科技與管理組</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立中山大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">長庚大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立東華大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立屏東大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立臺東大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">元智大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">元智大學</span>
+            <span class="dept-name">資訊學院英語學士班</span>
+        </div>
+        <div class="school-list-row">
+            <span class="school-name">國立中正大學</span>
+            <span class="dept-name">資訊管理學系</span>
+        </div>
+
+        </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-qQL5nFihf1u6lftAeG7kFlTrjXN/SwG2i9LC9NxKw0DQq0q3N4pEVL2re6bmKp1U" crossorigin="anonymous"></script>
 </body>
 </html>
