@@ -1,0 +1,268 @@
+#primaryHeading {
+    background-color: #18557e;/* 深藍色標題 */
+    color: white;
+  }
+
+h1{
+    text-align: center;
+    background-color: rgb(215, 224, 225);
+}
+
+body {
+    background: linear-gradient(to bottom, #fefefe, #A0A0A0); /* 淺灰背景 */
+    color: #2C3E50; /* 主要文字顏色 */
+    min-height: 100vh;
+    padding: 40px;
+    padding-top: 80px;
+}
+
+.card {
+    margin: 15px auto; /* 調整外間距，避免卡片太黏 */
+    padding: 20px; /* 增加內間距，讓內容更舒適 */
+    width: auto;
+    color: #2C3E50;
+    min-height: auto;
+    height: auto;
+}
+
+h3 {
+    margin-bottom: 12px; /* 讓標題和文字有間距 */
+}
+
+.col-md-6 {
+    margin-bottom: 10px; /* 增加卡片之間的間距 */
+}
+
+.row {
+    row-gap: 5px; 
+}
+
+mark {
+    background-color: #f7ecb3; /* 透明度為 30% 的金黃色 */
+}
+
+.card-title mark {
+        background-color: #18557e; /* 設定標記的背景顏色 */
+        color: white; /* 設定文字顏色 */
+        padding: 2px; /* 增加一些間距讓效果更明顯 */
+}
+
+.move-down {
+    color: blue;
+    margin-top: 30px;
+}
+
+.school-list-row {
+  display: grid;
+  grid-template-columns: 200px auto;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 100px;
+  padding: 10px 0;
+}
+
+.school-list-row:last-child {
+  border-bottom: none;
+}
+
+.school-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.dept-name {
+  color: #555;
+}
+
+
+
+
+/*按鈕列*/
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap; /* 確保在小螢幕可換行 */
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #27AE60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button span {
+    font-size: 28px;
+}
+
+.button p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+.button:hover {
+    background-color: #9dd5b4; 
+    transform: scale(1.1); /* 讓按鈕放大 */
+}
+
+.button-container a {
+    text-decoration: none; /* 移除底線 */
+    color: inherit;
+}
+
+table {
+    width: 90%; /* 設定表格寬度 */
+    max-width: 1200px; /* 確保不會過窄 */
+    margin: 0 auto; /* 讓表格置中 */
+}
+
+th, td {
+    font-size: 18px; /* 放大文字 */
+    padding: 15px; /* 增加內距，讓內容更有空間 */
+}
+
+.bar {
+    height:400px; /* 調高條形圖 */
+    font-size: 16px; /* 放大條形圖內的文字 */
+}
+
+/*長條圖*/
+.bar-container {
+    width: 100%;
+    background-color: #eee; /* 淺灰色背景，保持一致 */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+}
+
+.bar {
+    height: 20px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    transition: width 1s ease-in-out, background-color 0.5s ease;
+}
+
+/* 依據百分比變換顏色 */
+.bar[data-percent] {
+    background-color: hsl(calc(var(--percent) * 2), 80%, 50%);
+}
+
+/* 懸停時讓顏色更鮮豔 */
+.bar:hover {
+    filter: brightness(1.2);
+}
+
+/* 提示框 */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===== 手風琴功能樣式，只控制內部展開動作，不改外觀 ===== */
+.career-accordion .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #18557e;
+    font-weight: bold;
+}
+
+.career-accordion .accordion-item {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.career-accordion .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    background: #f7f9fa;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.career-accordion .accordion-header:hover {
+    background: #e0f0ff;
+}
+
+.career-accordion .symbol {
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.career-accordion .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    background: #fff;
+    color: #333;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.career-accordion .accordion-item.active .accordion-content {
+    padding: 16px;
+    max-height: 300px;
+}
+
+.career-accordion .accordion-item.active .symbol {
+    transform: rotate(45deg);
+}
+
+/*導覽列*/
+.navbar-nav .nav-link {
+  background-color: transparent;
+  color: #ffffff; /* 白色文字 */
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ffffff;
+  color: #0d47a1; /* 滑過時文字變色 */
+}
+
+fieldset {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#mainNav {
+    background-color: #18557e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#mainNav .nav-link.active{
+    color: #2C3E50;
+}
