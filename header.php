@@ -1,86 +1,59 @@
 <?php
-// week02/header.php
-$current = basename($_SERVER['PHP_SELF']);
+session_start();
+$title=$title??"活動系統";
 function nav_active($file) {
-    global $current;
+    $current = basename($_SERVER['PHP_SELF']);
     return $current === $file ? ' active' : '';
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
     <meta charset="UTF-8">
-    <title>資訊管理 學類</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="資管.css"/>
-
-
-
-    <fieldset>
-        <nav id="mainNav" class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid">
-                <a class="navbar-brand" href="資訊學群.html">
-                <img src="collego-logo.png" alt="Collego" style="height: 40px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-underline me-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        大學選才
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">認識學群</a></li>
-                        <li><a class="dropdown-item" href="#">認識學類</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="高中育才">高中育才</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="焦點話題">焦點話題</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="最新消息">最新消息</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="搜尋">搜尋</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="常見與問答">常見與問答</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">登入</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-
-        <h1><strong>資訊管理 學類</strong></h1>
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-      </nav>
-
-    <div class="button-container">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?=$title?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-
-      <li class="nav-item">
-            <a class="nav-link<?=nav_active('生涯進路.php')?>" href="生涯進路.php">生涯進路</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link<?=nav_active('能力特質.php')?>" href="能力特質.php">能力特質</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link<?=nav_active('對應校系.php')?>" href="對應校系.php">對應校系</a>
-        </li>
-    </div>
-</nav>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
+    
+    <link rel="stylesheet" href="custom.css" />
 </head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg custom-bg">
+    <div class="container">
+      <a class="navbar-brand" href="index.php">活動報名系統</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link<?=nav_active('index.php')?>" aria-current="page" href="index.php">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link<?=nav_active('status.php')?>" href="status.php">迎新茶會</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link<?=nav_active('conference.php')?>" href="conference.php">資管一日營</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link<?=nav_active('job.php')?>" href="job.php">求才資訊</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav mb-2 mb-lg-0">
+        <?php if(isset($_SESSION['account'])): ?>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">登出</a>
+          </li>
+        <?php else: ?>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">登入</a>
+          </li>
+        <?php endif; ?>
+      </ul>
+      </div>
+    </div>
+  </nav>
